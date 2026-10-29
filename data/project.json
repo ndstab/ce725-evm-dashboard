@@ -1,0 +1,25 @@
+{
+  "project_name": "Academic Block (G+4 RCC) - Institutional Campus",
+  "project_code": "CE725-CASE-01",
+  "currency": "INR",
+  "baseline_periods": 12,
+  "period_unit": "month",
+  "data_date_period": 6,
+  "period_labels": [
+    "Apr-2025",
+    "May-2025",
+    "Jun-2025",
+    "Jul-2025",
+    "Aug-2025",
+    "Sep-2025",
+    "Oct-2025",
+    "Nov-2025",
+    "Dec-2025",
+    "Jan-2026",
+    "Feb-2026",
+    "Mar-2026"
+  ],
+  "notes": "Synthetic case study. All budgets, progress percentages and actual costs are assumed for teaching purposes and are not drawn from any real tender, estimate or invoice.",
+  "bac_inr": 140000000,
+  "work_package_count": 19
+}

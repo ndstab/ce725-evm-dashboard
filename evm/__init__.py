@@ -7,6 +7,9 @@ from .core import (
 )
 from .earned_schedule import earned_schedule, earned_schedule_series, EarnedScheduleResult
 from .forecasting import forecasts, tcpi_to_bac, feasibility_note, Forecast
+from .commentary import (
+    monthly_commentary, executive_summary, status_flag, Commentary,
+)
 
 __all__ = [
     "Project", "ProjectMeta", "load_project", "DataValidationError",
@@ -14,4 +17,5 @@ __all__ = [
     "variance_by_wbs", "pv_matrix", "ev_matrix", "ac_matrix",
     "earned_schedule", "earned_schedule_series", "EarnedScheduleResult",
     "forecasts", "tcpi_to_bac", "feasibility_note", "Forecast",
+    "monthly_commentary", "executive_summary", "status_flag", "Commentary",
 ]

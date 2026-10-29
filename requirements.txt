@@ -1,16 +1,15 @@
-# Core engine
-pandas==2.2.3
-numpy==2.1.3
+# Pinned to the versions this project was built and validated against.
+# Install:  python -m venv .venv && .venv/bin/pip install -r requirements.txt
 
-# Tool (Streamlit dashboard)
-streamlit==1.40.2
-plotly==5.24.1
-
-# Excel export with live formulas
+numpy==2.5.4
 openpyxl==3.1.5
+pandas==3.1.0
+plotly==7.1.0
+pytest==9.2.0
+streamlit==1.66.1
 
-# Validation: executes workbook formulas instead of re-implementing them
-formulas==1.2.10
-
-# Tests
-pytest==8.3.4
+# NOT a Python dependency: the benchmark validation in
+# scripts/validate_benchmark.py drives LibreOffice in headless mode to
+# evaluate the Excel workbook's formulas. Install it separately from
+# libreoffice.org if you want to regenerate the benchmark snapshot. The
+# test suite reads the committed snapshot and does not need it.

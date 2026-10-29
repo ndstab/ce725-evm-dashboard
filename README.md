@@ -122,6 +122,7 @@ docs/                 all written deliverables
 | [AI usage log](docs/05-ai-usage-log.md) | 31 entries, Annexure A format |
 | [Learnings and reflection](docs/06-learnings-and-reflection.md) | All six required sections |
 | [Presentation and viva prep](docs/07-presentation.md) | Slide content, demo script, expected questions |
+| [Slide deck](docs/presentation/CE725_Team40_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |
 
 ---
 

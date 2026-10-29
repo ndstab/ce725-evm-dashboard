@@ -8,6 +8,29 @@ that, and is the part worth rehearsing.
 
 ---
 
+## 0. The built deck
+
+The slides below are built into
+[`docs/presentation/CE725_Team40_EVM_Dashboard.pptx`](presentation/CE725_Team40_EVM_Dashboard.pptx)
+— 12 slides, 16:9, with the *Say* paragraphs carried through as speaker
+notes.
+
+The deck is **generated**, not hand-built, by
+[`docs/presentation/build_deck.js`](presentation/build_deck.js):
+
+```bash
+NODE_PATH=$(npm root -g) node docs/presentation/build_deck.js
+```
+
+Every figure quoted on a slide is listed in one `FIG` block at the top of
+that script, so a number on a slide can be checked against the engine
+rather than taken on trust — the same reason the rest of the project is
+built the way it is. Slides 6 and 7 carry the dashboard screenshots from
+`docs/img/`, so they work unchanged if the live demonstration cannot be
+run.
+
+---
+
 ## 1. Slide content and timing
 
 Total 15 minutes. Timings are cumulative. The live demonstration is the

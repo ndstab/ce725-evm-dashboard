@@ -20,7 +20,7 @@ from bullet points.
 
 **Earned Value Management Dashboard**
 Construction Economics and Finance · CE725 · Topic 7
-Team [N] · [Member names]
+Team 40 · Sajjad Nakhwa · Dependar Arya · Neel Shah · Akshat Karkar · Pearsh Gumasta
 
 *Say:* "We built a tool that tells a project manager whether a project is
 in trouble, where the trouble is, and what it will cost. The part we want
@@ -396,7 +396,7 @@ is resisted for that reason. Better software does not fix it.
 **Q. How much of this did AI write?**
 Most of the code, and first drafts of the documents. All of it was
 checked: expected values hand-derived before the engine ran, an
-independent benchmark, and a 28-entry usage log recording where AI was
+independent benchmark, and a 31-entry usage log recording where AI was
 wrong, where we were wrong, and where its output was rejected on
 principle.
 
@@ -411,6 +411,24 @@ applied to cost.
 The ₹156 EAC3 discrepancy. We assumed the engine was wrong. It recomputed
 in 40-digit decimal arithmetic and showed our hand figure had rounded
 mid-chain.
+
+**Q. Your charter calls this an "AI-assisted EVM dashboard", but you say
+the commentary does not use a language model. Where is the AI?**
+In how it was built, not in what it runs. AI wrote most of the code and
+the first drafts of the documents, and that is logged in full. The
+delivered tool is deterministic by choice — no model is called at
+runtime, because a cost report must give the same sentence from the same
+inputs every month and must not contain a figure that was never
+computed. Deciding *not* to put a language model in the output path, and
+being able to say why, is the substantive finding of the project rather
+than a shortfall against the charter.
+
+**Q. Did AI write your individual reflections?**
+It drafted a scaffold — the four questions and a reminder of which
+recorded discrepancy each of us owned — and each of us then wrote our own
+entry. That is logged as entry 31. A reflection is a first-person claim
+about one person's understanding, so an AI-written one is worth nothing
+however well it reads, and any of us can be asked about our own paragraph.
 
 **Q. Who is accountable if a decision on these numbers goes wrong?**
 The engineer who signs the report. Not the tool, not the AI. That is why

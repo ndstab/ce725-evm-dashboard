@@ -3,13 +3,27 @@
 **CE725 Construction Economics and Finance — Semester Course Project**
 **Topic 7: Earned Value Management (EVM) Dashboard**
 
-> **Team details to be completed before submission.** The names and role
-> allocation below are placeholders. Every other field is final.
+**Team 40**
+
+> This is the final version of the charter submitted earlier in the
+> semester. The fields below expand on that submission; nothing in it has
+> been reversed. Two points of wording are worth stating plainly, since
+> the submitted charter is the document on record:
+>
+> - The submitted charter describes an **"AI-assisted"** dashboard. AI
+>   assistance was applied to building the tool, and is logged in full in
+>   `docs/05-ai-usage-log.md`. The delivered tool calls no language model
+>   at runtime; the plain-language commentary is rule-based and
+>   deterministic, for the reasons set out under *Scope boundaries* below.
+> - The submitted charter lists PV, EV, AC, CPI, SPI, EAC, ETC and TCPI.
+>   All are implemented. The tool additionally reports CV, SV, Earned
+>   Schedule — SV(t), SPI(t) and IEAC(t) — and all four standard EAC
+>   methods rather than one.
 
 | Item | Details |
 |---|---|
-| **Team number** | *[to be completed]* |
-| **Team members and roles** | **[Member 1]** — Project Lead and Finance Modeller: owns the EVM method, the choice of forecasting formulas and the index conventions used throughout.<br>**[Member 2]** — Data Lead: owns the case study project, the work breakdown structure, the time-phased budget and the source list.<br>**[Member 3]** — AI and Tool Developer: owns the Python engine, the Streamlit dashboard and the Excel export; manages the repository.<br>**[Member 4]** — Validation Engineer: owns the manual benchmark workbook, the hand calculations, the test suite and the discrepancy log.<br>**[Member 5]** — Documentation and Reflection Lead: owns the user manual, the AI usage log, the reflection report and the presentation. |
+| **Team number** | 40 |
+| **Team members and roles** | **Sajjad Nakhwa** (23B0702) — Project Lead and Finance Modeller: owns the EVM method, the choice of forecasting formulas and the index conventions used throughout.<br>**Dependar Arya** (23B0331) — Data Lead: owns the case study project, the work breakdown structure, the time-phased budget and the source list.<br>**Neel Shah** (23B4244) — AI and Tool Developer: owns the Python engine, the Streamlit dashboard and the Excel export; manages the repository.<br>**Akshat Karkar** (23B4229) — Validation Engineer: owns the manual benchmark workbook, the hand calculations, the test suite and the discrepancy log.<br>**Pearsh Gumasta** (23B4232) — Documentation and Reflection Lead: owns the user manual, the AI usage log, the reflection report and the presentation. |
 | **Topic selected** | Topic 7 — Earned Value Management (EVM) Dashboard |
 | **Problem statement** | Construction project managers learn that a project is in trouble too late to act. Monthly reporting typically compares money spent against money budgeted, which conflates two different failures: spending more than planned, and doing less work than planned. A project that has spent 28% of its budget may be 28% complete or 20% complete, and the cost report alone cannot distinguish them. Earned Value Management separates the two by introducing a third measure, the budgeted cost of the work actually done, and from it derives early warning indices. The problem this tool addresses is that EVM is computationally tedious at work-package level, is therefore usually either skipped or rolled up to a single project curve that cannot locate a variance, and produces indices that non-specialist decision-makers cannot interpret. |
 | **Intended users of the tool** | Primary: a project manager or planning engineer preparing a monthly progress report for a contractor or a client. Secondary: a client's project management consultant reviewing contractor claims; a lender's independent engineer assessing whether a project will need more funding than sanctioned. Each of these reads indices rather than computing them, which is why the tool leads with a plain-language verdict rather than a table. |

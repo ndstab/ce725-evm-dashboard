@@ -3,8 +3,8 @@
 **CE725 Construction Economics and Finance**
 **Topic 7: Earned Value Management Dashboard**
 
-> **Section 5 contains placeholder names.** Each team member should
-> replace their own entry. Everything else is final.
+**Team 40** — Sajjad Nakhwa (23B0702) · Dependar Arya (23B0331) ·
+Neel Shah (23B4244) · Akshat Karkar (23B4229) · Pearsh Gumasta (23B4232)
 
 ---
 
@@ -516,120 +516,225 @@ most deflating one.
 
 ## 5. Individual reflections
 
-> Placeholder entries. Each member should replace their own with their
-> actual experience. The role framing and the questions each entry
-> addresses are set; the content must be personal to be worth anything.
+Each entry below is written by the member named, against a common set of
+four questions, and covers the work that member owned.
 
-### [Member 1] — Project Lead and Finance Modeller
+### 5.1 Sajjad Nakhwa (23B0702) — Project Lead and Finance Modeller
 
-*My role:* owned the EVM method, the choice of forecasting formulas and
-the index conventions.
+*My role:* I owned the EVM method itself — which measures the tool would
+report, which forecasting formulas it would use, and the conventions for
+signs, rounding and undefined values that every other part of the project
+then had to follow. I also set the sequence of work and arbitrated the
+design arguments, of which the commentary question was the largest.
 
-*What I did not understand before:* that there is no single EAC formula,
-and that the choice between them is a judgement about the nature of the
-variance rather than a technical one. I expected to learn "the" formula.
-Understanding that the ₹3.47 crore spread between EAC2 and EAC3 is the
-method being honest, rather than failing, changed how I read any forecast.
+*What I did not understand before:* that there is no single EAC formula.
+I came into this expecting to learn *the* way to forecast a project's
+final cost, and instead found four standard methods that differ in one
+assumption each — whether the variance to date will persist, whether it
+was one-off, whether schedule pressure will also cost money. On our case
+study they span ₹3.47 crore. I initially read that spread as the method
+failing. It is the method being honest: the spread *is* the uncertainty,
+and collapsing it to one number does not remove the uncertainty, only the
+reader's awareness of it.
 
-*What I got wrong:* I initially specified that the tool should pick the
-best EAC and show one number. That would have been the most confidently
-misleading feature in the project.
+*What I got wrong:* I specified early on that the tool should select the
+most appropriate EAC and display a single figure, with the others
+available on request. That would have been the most confidently
+misleading feature in the project — a number carrying an implied
+precision the underlying method cannot support. I was argued out of it,
+correctly, and the dashboard now presents the range with each method's
+assumption stated beside it.
 
-*What I would do differently:* decide the index conventions — sign,
-rounding, NaN handling — on day one and write them down. We settled
-rounding only after the ₹156 discrepancy forced it.
+The second thing I got wrong was leaving the arithmetic conventions
+unwritten. Rounding, the sign convention on variances, and what an index
+should return when its denominator is zero are boring decisions, so I
+deferred them. We then spent real time on a ₹156 disagreement between a
+hand calculation and the engine that existed only because nobody had
+said where rounding was permitted. The rule we ended on — rounding is
+presentation only, never intermediate — should have been written on day
+one.
 
-*What I will carry into practice:* TCPI against CPI as the first question
-to ask of any recovery plan.
+*What I would do differently:* fix the conventions before any code, and
+write them in one place that the engine, the benchmark and the hand
+calculations all cite.
 
-### [Member 2] — Data Lead
+*What I will carry into practice:* TCPI read against CPI as the first
+question to ask of any recovery plan. Our project needs 1.051 efficiency
+on remaining work having achieved 0.872 so far. That comparison turns
+"we will recover in the second half" from an assertion into a claim with
+a number attached, and it takes ten seconds to make.
 
-*My role:* owned the case study, the WBS, the time-phased budget and the
-source list.
+### 5.2 Dependar Arya (23B0331) — Data Lead
 
-*What I did not understand before:* how much of EVM's credibility rests on
-the baseline being internally consistent. If the time-phased budget does
-not sum to each package's budget and to BAC, every schedule index is
-silently scaled by the error and nothing visible breaks.
+*My role:* I owned the case study — the work breakdown structure, the
+budget for each of the 19 packages, the baseline window each package sits
+in, the time-phasing within those windows, and the actual cost and
+percent-complete figures for the six reported periods. I also compiled
+the data source list and the statement of what our figures are and are
+not.
 
-*What I got wrong:* my first case study spread the variance evenly across
-packages. It took a review to see that this made the tool's central
-feature pointless — if everything is equally to blame, locating the
-variance tells you nothing.
+*What I did not understand before:* how much of EVM's credibility rests
+on the baseline being internally consistent, and how quietly it fails if
+it is not. The time-phased budget has to sum to each package's budget,
+and the package budgets have to sum to BAC. If they do not, PV is wrong
+by the error, every schedule index is silently scaled by it, and nothing
+visible breaks — the dashboard still draws a plausible S-curve and still
+reports an SPI to three decimals. I had assumed errors in a model would
+announce themselves. The reconciliation check that now refuses to load a
+project whose baseline does not tie out is there because of this.
 
-*What I would do differently:* write the project's narrative first and
-derive the numbers from it. I did it the other way round and spent time
-reverse-engineering a story the figures would support.
+*What I got wrong:* my first version of the case study spread the cost
+overrun evenly across all 19 packages. It gave a realistic-looking
+project CPI and I was pleased with it. It also made the tool's central
+feature pointless: if every package is equally to blame, locating the
+variance tells a manager nothing he did not already know from the project
+total. The case study had to be rebuilt so that the variance is
+*concentrated* — 74% of it sits in three substructure packages, and those
+three are already complete, which is a different management problem from
+the same rupees sitting in live work. The lesson is that a dataset built
+to demonstrate a tool has to be built around the decision the tool is
+supposed to support.
 
-*What I will carry into practice:* that a dataset built to demonstrate
-something proves nothing empirically, and must be labelled as
-illustrative every time it is shown.
+*What I would do differently:* write the project's narrative first, in
+words, and derive the numbers from it. I worked the other way round —
+numbers first, then a story that would fit them — and spent longer
+reverse-engineering a plausible cause for figures I had already chosen
+than it would have taken to start from "hard rock in the excavation".
 
-### [Member 3] — AI and Tool Developer
+*What I will carry into practice:* that a dataset constructed to
+illustrate something proves nothing empirically, and has to be labelled
+as illustrative every single time it is shown. Ours is synthetic, every
+figure in it is assumed, and we say so in the charter, the method note,
+the manual, the workbook and on the dashboard itself. A number on a
+screen acquires authority it has not earned unless something on the same
+screen is actively denying it.
 
-*My role:* owned the Python engine, the dashboard and the Excel export.
+### 5.3 Neel Shah (23B4244) — AI and Tool Developer
+
+*My role:* I owned the implementation — the Python calculation engine,
+the Streamlit dashboard, the Plotly charts, the live-formula Excel export,
+and the repository itself.
 
 *What I did not understand before:* how much professional practice lives
-in defaults nobody documents — that openpyxl writes no cached results, or
-that Excel fills negative bars white unless told otherwise. Writing code
-that produces a correct file is a different problem from writing code that
-produces a file that *opens correctly*.
+in defaults that nobody documents. Two examples cost me real time.
+`openpyxl` writes formulas into a workbook but writes no cached results
+for them, so a reader that trusts the cache — which includes a great deal
+of software — sees a workbook full of empty cells; the fix is one flag,
+`fullCalcOnLoad`, and nothing warns you that you need it. Excel fills
+negative bars in a bar chart with white unless explicitly told otherwise,
+so a variance chart renders with the adverse packages invisible. Neither
+is a bug in my code. Both produce a file that is correct and unusable.
+Writing code that produces a correct file turns out to be a different
+problem from writing code that produces a file which *opens* correctly,
+and only the second one matters to the person receiving it.
 
-*What I got wrong:* the dark-theme CSS bug. I set panel backgrounds
-without setting text colours and never opened the app under a dark browser
-preference. Every test passed and the most important paragraph on the
-screen was invisible.
+*What I got wrong:* the dark-theme CSS bug, which is the failure I think
+about most. I styled the executive summary panel with a light background
+and did not set a text colour. Under a browser set to dark mode Streamlit
+supplied white text, and the single most important paragraph in the tool
+— the plain-language verdict a non-specialist reads first — rendered
+white on white. Every one of our tests passed. Every number was correct.
+The tool was unusable, and I found it only because I opened the running
+app to take screenshots for the manual. A test suite is evidence about
+arithmetic; it says nothing whatever about whether a human being can read
+the output.
 
-*What I would do differently:* look at the running thing earlier and more
-often. I spent too long with the test output as my only feedback.
+*What I would do differently:* look at the running thing earlier and far
+more often. For most of the build my only feedback was pytest output,
+which is fast, precise and blind to everything I most needed to know.
 
-*What I will carry into practice:* that a passing test suite is evidence
-about the arithmetic and nothing else.
+*What I will carry into practice:* when generated code uses a library's
+defaults, check what those defaults *are* rather than assuming silence
+means sensible. The three chart overrides we adopted from the prior-art
+repository would each have taken me a day to find on my own, and I would
+have found them by someone telling me the output looked wrong.
 
-### [Member 4] — Validation Engineer
+### 5.4 Akshat Karkar (23B4229) — Validation Engineer
 
-*My role:* owned the manual benchmark, the hand calculations, the test
-suite and the discrepancy log.
+*My role:* I owned the check — the independent manual benchmark workbook,
+the hand calculations for Periods 5 and 6, the 150-test suite, and the
+discrepancy log.
 
 *What I did not understand before:* that a check is worth only what is
-independent about it. I would have written a second Python implementation
-and believed it. The argument that it would embed the same misunderstanding
-and agree with my own bug is the single most useful idea I took from this
-project.
+genuinely independent about it. My instinct, and my first plan, was to
+write a second implementation of the EVM formulas in Python and compare
+the two. That feels rigorous and is nearly worthless: both
+implementations would have been written by the same people from the same
+reading of the same formulas, so a formula I had misunderstood would have
+been misunderstood identically on both sides. The comparison passes, I
+report agreement, and both numbers are wrong. The benchmark therefore
+lives in typed Excel formulas acting on the raw inputs, and it is
+*executed* by LibreOffice rather than re-implemented — a different
+formula language, evaluated by a different engine. That one decision is
+the difference between a validation and a reassurance.
 
-*What I got wrong:* my hand calculation of EAC3. I rounded CPI × SPI to
-six decimals because that is what you do on paper, and was ₹156 out. I
-also assumed the tool was wrong rather than checking both.
+*What I got wrong:* my hand calculation of EAC3, which disagreed with the
+engine by ₹156. I assumed the engine was wrong, because the engine was
+the thing under test and I was the control. It was not wrong. I had
+rounded CPI × SPI to six decimal places partway through the chain,
+because that is what one does on paper, and the error propagated through
+the division. Recomputing at 40 significant digits showed the engine had
+been right throughout. Two things follow: precision rules have to be
+agreed before anybody calculates anything, and the control is not
+automatically correct merely because it is the control.
 
-*What I would do differently:* decide the precision rules before
-calculating anything.
+I also got two of my own tests wrong. Both asserted that a specific
+input-validation rule would reject a bad project, and both failed —
+because an *earlier* rule caught the same bad project first. The quick
+fix was to loosen the engine until the tests passed. That would have
+deleted a correct rule, one that catches earned value being double
+counted. I rewrote both tests to exercise each rule in isolation and
+changed no engine code.
+
+*What I would do differently:* decide the precision and rounding rules
+before producing a single hand figure.
 
 *What I will carry into practice:* ask *why* a test fails before changing
-anything. Two of our failures were in the tests, and the fast fix would
-have deleted a correct validation rule.
+anything at all. Two of our four discrepancies were defects in the check
+rather than in the thing being checked, and in both cases the fast fix
+would have made the project worse while making the output greener.
 
-### [Member 5] — Documentation and Reflection Lead
+### 5.5 Pearsh Gumasta (23B4232) — Documentation and Reflection Lead
 
-*My role:* owned the user manual, the AI usage log, this report and the
-presentation.
+*My role:* I owned everything written — the user manual, the AI usage
+log, this report, and the presentation and viva preparation.
 
 *What I did not understand before:* how much a document's structure is an
-argument. The first validation report led with "50 of 50 agree" and buried
-the limitation that neither implementation can detect a wrong
-percent-complete figure. Same facts, opposite impression.
+argument, independently of its contents. The first draft of our
+validation report opened with "50 of 50 comparisons agree" and placed, in
+an appendix, the fact that neither implementation can detect a wrong
+percent-complete figure at source. Every sentence was true. The document
+said the tool was verified. Moving that limitation into a prominent
+numbered section, with nothing else changed, turns the same facts into a
+document that says the arithmetic is verified and the inputs are not.
+A reader who skims the first page and stops gets the opposite impression
+from the same evidence depending on an ordering decision I made without
+thinking about it.
 
-*What I got wrong:* I nearly let the AI usage log become a list of
-"Accept" entries, which would have been evidence that nobody was checking.
-The entries worth reading are the four where something went wrong.
+*What I got wrong:* I nearly let the AI usage log become a list of 28
+"Accept" entries. It would have been accurate, in that most AI output was
+in fact accepted, and it would have been evidence that nobody was
+checking anything. The entries actually worth reading are the four where
+something went wrong: where the AI was wrong, where it was right and we
+were wrong, and where we rejected output that would have worked
+perfectly well — the language-model commentary — on principle. I
+restructured the log to surface those four and said in the declaration
+why a uniformly positive log should not be believed.
 
-*What I would do differently:* write the limitations section first. It is
-the part that gets written last and rushed, and it is the part a
-practitioner reads first.
+*What I would do differently:* write the limitations section first rather
+than last. It is the section that gets written at the end, when everyone
+is tired and the tool is working and nobody wants to dwell on what it
+cannot do — and it is the first section a practising engineer turns to.
+Writing it first would also have improved the tool, because several
+limitations are things we could have addressed had we noticed them in
+week one instead of week four.
 
-*What I will carry into practice:* repeat the most important caveat in
-every document rather than once. The percent-complete limitation appears
-in four places deliberately, because a polished interface works hard to
-make the reader forget it.
+*What I will carry into practice:* repeat the most important caveat
+rather than stating it once. The percent-complete limitation appears in
+five places in our documentation, deliberately, and I expected that to
+feel repetitive. It does not, because a polished interface works
+continuously to make the reader forget it, and one mention in a method
+note is no match for a dashboard with a confident green verdict on it.
 
 ---
 

@@ -1,0 +1,20 @@
+# The dashboard is pinned to a light theme on purpose.
+#
+# Two reasons. Its figures get screenshotted into progress reports and
+# printed, and a dark dashboard prints as a black rectangle. And the
+# custom CSS below sets light panel backgrounds; inheriting a dark theme's
+# white text onto them renders the executive summary invisible, which is
+# exactly the bug this file fixes.
+
+[theme]
+base = "light"
+primaryColor = "#1F3864"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F6F8"
+textColor = "#1A1A1A"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

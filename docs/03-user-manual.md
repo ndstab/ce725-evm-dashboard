@@ -99,7 +99,7 @@ forcing you to convert.
   "baseline_periods": 12,
   "period_unit": "month",
   "data_date_period": 6,
-  "period_labels": ["Apr-2025", "May-2025", "..."],
+  "period_labels": ["Apr-2026", "May-2026", "..."],
   "bac_inr": 140000000
 }
 ```

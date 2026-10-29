@@ -66,7 +66,7 @@ class TestMonthlyCommentary:
         project, m, es = context
         c = evm.monthly_commentary(project, 6, m, es)
         assert len(c.paragraphs) == 4
-        assert c.period_label == "Sep-2025"
+        assert c.period_label == "Sep-2026"
 
     def test_every_figure_quoted_is_a_computed_figure(self, context):
         """The anti-hallucination property, asserted rather than assumed.

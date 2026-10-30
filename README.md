@@ -124,6 +124,18 @@ docs/                 all written deliverables
 | [Presentation and viva prep](docs/07-presentation.md) | Slide content, demo script, expected questions |
 | [Slide deck](docs/presentation/CE725_Team40_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |
 
+Submission-ready PDFs of all of the above, with title pages and running
+footers, are in [`docs/pdf/`](docs/pdf/) — including
+`CE725_Team40_Topic7_All_Deliverables.pdf`, the whole set as one 73-page
+file. Rebuild them with:
+
+```bash
+python scripts/build_pdfs.py
+```
+
+The script checks each document against the page counts the brief
+specifies and exits non-zero if one is outside them.
+
 ---
 
 ## How it is validated

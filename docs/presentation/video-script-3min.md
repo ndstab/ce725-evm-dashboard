@@ -46,12 +46,44 @@ come out however it comes out. 0.872, 1.051, 19 days, ₹38 lakh, ₹7.7 lakh,
 **Three things not to do.** Don't call the commentary AI-generated. Don't
 describe the case study as real. Don't cut Pearsh's last two lines.
 
+## How to actually record it
+
+**The simplest way that satisfies the instruction.** All five join one video
+call. One person — Neel, since he knows the app — shares the screen and
+drives the mouse for the whole three minutes. Everyone's camera stays on the
+whole time, so all five are visibly present. Each person unmutes for their
+own block. Record the call. One take, no editing, everybody on video.
+
+**The better-looking way, if you have an hour.** Record the screen once,
+silent, with one person driving to the beats below. Then record each person's
+audio and webcam separately. Edit the webcam in as a corner inset over the
+screen capture. Cleaner, but it is four extra files to sync.
+
+**Whoever drives the mouse: move, pause, then let the speaker talk.** The
+commonest mistake in a tool demo is moving the cursor while a number is being
+said, so the viewer is tracking motion instead of reading the figure. Land on
+the thing, stop, and let it sit.
+
+**Rehearse the handoffs, not the words.** The five transitions are where a
+one-take recording falls apart. Each speaker should know the last four words
+of the person before them.
+
 ---
 
 ## 1. Sajjad Nakhwa · 0:00–0:30
 
-**ON SCREEN:** dashboard open at the top, Period 6. Cursor on the PV, AC and EV
-tiles as they are named.
+**ON SCREEN:** dashboard open at the top, Period 6, scrolled so the verdict bar
+and all twelve tiles are visible. Cursor parked off to the side.
+
+**DO:**
+- **0:00** Hold still on the full dashboard for two seconds before anyone
+  speaks. Let the viewer see the whole thing once.
+- **"spent 3.98 crore"** — cursor to the **Actual cost (AC)** tile, stop.
+- **"against a plan of 4.02"** — slide to **Planned value (PV)**, stop.
+- **"It's not"** — drop to the red **BEHIND SCHEDULE AND OVERSPENT** bar and
+  leave it there for the whole sentence. Don't circle it; just rest on it.
+- **"earned value"** — move to the **Earned value (EV)** tile and stay until
+  Dependar starts.
 
 Hi, we're Team 40 — I'm Sajjad, I led the project. So, look at this. We've
 spent 3.98 crore against a plan of 4.02. Under budget, right? Most reports
@@ -66,7 +98,21 @@ So we add the measurement that separates them — earned value.
 
 ## 2. Dependar Arya · 0:30–1:00
 
-**ON SCREEN:** sidebar, then open the **Data** tab so the input tables show.
+**ON SCREEN:** sidebar, then the **Data** tab.
+
+**DO:**
+- **"the case is a G+4 academic block"** — cursor to the project title at the
+  top of the page.
+- **"fourteen crore… nineteen packages"** — move to the **Budget (BAC)** tile,
+  which reads *Rs 14.00 Cr* and *19 work packages* underneath. Both numbers he
+  says are in that one tile, so one move covers the sentence.
+- **"reported at the end of month six"** — down to the sidebar's **Reporting
+  period** slider, sitting on 6, with *Period 6 — Sep-2026* under it.
+- **"this data is synthetic"** — stop moving entirely. Look-at-the-camera
+  moment if you're editing webcam in. Nothing on screen competes with it.
+- **"The tool reads three files"** — click the **Data** tab and scroll slowly
+  through the input tables while he names them. Keep scrolling gentle; fast
+  scrolling reads as panic.
 
 Hi, I'm Dependar, I handled the data. So the case is a G+4 academic block —
 fourteen crore, twelve months, nineteen packages, reported at the end of month
@@ -82,8 +128,24 @@ and everything recalculates.
 
 ## 3. Neel Shah · 1:00–1:45
 
-**ON SCREEN:** back to the top. Cursor: verdict bar → summary → CPI tile →
-TCPI, holding on TCPI.
+**ON SCREEN:** back to the top of the page.
+
+**DO:**
+- **"it answers before it reports"** — scroll back up so the verdict bar is at
+  the top of frame.
+- **"behind schedule and overspent"** — cursor on the verdict bar.
+- **"thresholds in one file"** — no movement. He's describing something not on
+  screen; moving the mouse here just distracts.
+- **"in plain English"** — drop to the grey summary paragraph and let the
+  viewer read along while he talks. This is the one place where the cursor
+  should travel slowly across the text, roughly keeping pace with his words.
+- **"CPI is 0.872"** — straight to the **CPI** tile. Stop.
+- **"And this one I'd remember"** — deliberate pause, then move to **TCPI to
+  finish on budget**, which reads *1.051* with *+20.6% vs current CPI*
+  underneath in red.
+- **Hold on TCPI** for the rest of the block, all the way through "the
+  budget's gone". This is the single most important number in the video —
+  nothing else moves while he says it.
 
 I'm Neel, I built the tool. So it answers before it reports. Top line — behind
 schedule and overspent. That verdict comes from thresholds in one file, so the
@@ -102,8 +164,32 @@ months. So, realistically — the budget's gone.
 
 ## 4. Akshat Karkar · 1:45–2:22
 
-**ON SCREEN:** open **Where the variance is** (Sub-level), then **Performance
-trend**, then **Forecast**.
+**ON SCREEN:** three tabs in sequence — **Where the variance is**, then
+**Performance trend**, then **Forecast**.
+
+**DO:**
+- **"where's the money actually gone?"** — click the **Where the variance is**
+  tab. The **Breakdown** control is now at the top of that tab; it should
+  already be on **Sub-level**. Don't touch it mid-sentence.
+- **"Excavation — CPI 0.689"** — cursor to the longest red bar, top of the
+  chart, then down to the **Excavation and earthwork** row in the table so the
+  *0.689* and *100.0%* columns are both visible.
+- **"38 lakh is already spent"** — rest on the *% complete* column reading
+  **100.0%**. That column is the whole argument: finished means unrecoverable.
+- **"Only 7.7 lakh is still live"** — move to the two frame rows showing 22%
+  and 14%.
+- **"On schedule, here's the thing"** — click **Performance trend**. Let the
+  chart draw before he carries on.
+- **"SPI goes back to 1.00"** — trace slowly along the SPI line.
+- **"19 days behind"** — scroll up briefly to the **Earned schedule SPI(t)**
+  tile, which reads *0.893* and *−19 days*. Or point at the SPI(t) line. Don't
+  do both.
+- **"the forecast gives four methods"** — click **Forecast**. The four EACs are
+  listed under the chart with their assumptions. Rest on the range, don't
+  click into any single method.
+- **Leave the SPI(t) checkbox alone.** It's at the top of this tab now and it
+  is tempting. Ticking it mid-sentence changes two numbers on screen while
+  he's talking about a different one.
 
 I'm Akshat, I did the validation. So where's the money actually gone?
 
@@ -122,8 +208,28 @@ spread is the assumption, kept visible.
 
 ## 5. Pearsh Gumasta · 2:22–3:00
 
-**ON SCREEN:** the Excel export, then a final frame showing the live tool link
-with all five members on camera.
+**ON SCREEN:** the Excel export, then the closing frame.
+
+**DO:**
+- **"how do we know any of this is right?"** — cursor to the sidebar's **Build
+  Excel workbook** button. Click it. The **Download workbook** button appears
+  underneath.
+- **"an Excel workbook of typed formulas"** — rest on it. If you have a
+  pre-opened Excel window with the benchmark workbook, cut to it here for
+  three or four seconds showing the formula bar with a real formula in it.
+  That shot is worth more than anything else in this block, because it proves
+  the claim rather than asserting it.
+- **"Fifty out of fifty agree"** — back to the dashboard.
+- **"But here's the limit"** — **stop everything.** No cursor movement, no tab
+  changes, nothing, for the rest of the block. If you're editing, this is where
+  you cut from the screen to all five faces. The strongest thing in the project
+  should not be delivered over a moving mouse pointer.
+- **"The arithmetic was never the risk"** — one full second of silence after
+  this sentence before the last line.
+- **"It's all at the link on screen"** — the closing frame: the live URL large
+  and readable, all five cameras visible. Hold it for three seconds after he
+  stops talking, then end the recording. Don't fade, don't add music, don't put
+  up a thank-you slide.
 
 I'm Pearsh. So how do we know any of this is right?
 

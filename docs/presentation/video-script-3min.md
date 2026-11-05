@@ -4,83 +4,99 @@
 video, NO slides, a demonstration of the tool explaining the interface and
 presenting the results of the use case.**
 
-Runs ~420 spoken words ≈ **3:00** at 140 words per minute. Each member speaks
-once, in one unbroken block, and never returns.
+451 spoken words. That is 3:13 at a careful 140 words a minute and 3:00 at
+the 150 most people actually hit in conversation — so time a read-through
+before recording, and if you are running long, the sentence to lose is
+Neel's "twenty percent better than we've managed in any of six months".
+
+Written to be **spoken, not read**. Contractions, short sentences, the odd
+"so" and "right" — say it the way you would to someone standing next to you at
+the screen. Don't read it off the page; learn the shape of your bit and the
+figures, then talk.
 
 ---
 
 ## Production notes
 
-| Block | Speaker | Runs | Words | On screen |
-|---|---|---|---|---|
-| 1 | **Sajjad Nakhwa** | 0:00–0:30 | ~65 | Dashboard top, Period 6 |
-| 2 | **Dependar Arya** | 0:30–1:00 | ~55 | Sidebar + Data tab |
-| 3 | **Neel Shah** | 1:00–1:45 | ~105 | Verdict bar → summary → CPI → TCPI |
-| 4 | **Akshat Karkar** | 1:45–2:22 | ~90 | Variance → Performance trend → Forecast |
-| 5 | **Pearsh Gumasta** | 2:22–3:00 | ~100 | Excel export, then repo link |
+| Block | Speaker | Runs | On screen |
+|---|---|---|---|
+| 1 | **Sajjad Nakhwa** | 0:00–0:30 | Dashboard top, Period 6 |
+| 2 | **Dependar Arya** | 0:30–1:00 | Sidebar + Data tab |
+| 3 | **Neel Shah** | 1:00–1:45 | Verdict bar → summary → CPI → TCPI |
+| 4 | **Akshat Karkar** | 1:45–2:22 | Variance → Performance trend → Forecast |
+| 5 | **Pearsh Gumasta** | 2:22–3:00 | Excel export, then the live link |
 
-**No slides.** The deck is not used in this video at all. The screen shows the
-running dashboard for the whole three minutes. Put the deck in the deliverables
-folder as a document, not in the recording.
+**No slides.** The running dashboard fills all three minutes. The deck goes in
+the deliverables folder as a document, not in the recording.
 
-**Everyone on camera.** Screen share with the speaker's webcam as
-picture-in-picture, bottom-right. Open and close with all five tiles visible so
-every face is clearly on video, which is what the instruction asks for.
+**Everyone on camera.** Screen share with the speaker's webcam
+picture-in-picture, bottom-right. Open and close with all five tiles visible.
 
-**One continuous take of the screen.** Set up once — browser at 100% zoom,
-1920×1080, reporting period slider at 6, variance breakdown on Sub-level — and
-drive the dashboard straight through. Speakers hand over without the screen
-jumping.
+**One continuous screen take.** Set up once — browser at 100% zoom, 1920×1080,
+reporting period slider at 6, variance breakdown on Sub-level — and drive it
+straight through.
 
-**Say every number while it is visible.** Never quote a figure the viewer cannot
-see on screen at that moment.
+**Say every number while it is visible.** Never quote a figure the viewer
+cannot see on screen at that moment.
 
-**Three things not to do.** Do not call the commentary AI-generated. Do not
-describe the case study as real. Do not cut Pearsh's last two sentences.
+**The numbers are the one thing to get exactly right.** Everything else can
+come out however it comes out. 0.872, 1.051, 19 days, ₹38 lakh, ₹7.7 lakh,
+50 of 50, 151 tests.
+
+**Three things not to do.** Don't call the commentary AI-generated. Don't
+describe the case study as real. Don't cut Pearsh's last two lines.
 
 ---
 
 ## 1. Sajjad Nakhwa · 0:00–0:30
 
-**ON SCREEN:** dashboard open at the top, Period 6. Cursor rests on the PV, AC and
-EV tiles as they are named.
+**ON SCREEN:** dashboard open at the top, Period 6. Cursor on the PV, AC and EV
+tiles as they are named.
 
-We're Team 40. I'm Sajjad Nakhwa, project lead. This project has spent ₹3.98
-crore against a plan of ₹4.02 crore — under budget. Most monthly reports would
-call that healthy. It isn't: it's 14.7 percent over budget and 19 days behind.
-Spend against budget mixes two questions into one comparison. Our tool adds the
-measurement that separates them, earned value, at every work package.
+Hi, we're Team 40 — I'm Sajjad, I led the project. So, look at this. We've
+spent 3.98 crore against a plan of 4.02. Under budget, right? Most reports
+would call that healthy.
+
+It's not. It's 14.7 percent over budget, and 19 days behind.
+
+Budget versus spend is one comparison trying to answer two questions at once.
+So we add the measurement that separates them — earned value.
 
 ---
 
 ## 2. Dependar Arya · 0:30–1:00
 
-**ON SCREEN:** sidebar, then open the **Data** tab so the input tables are visible.
+**ON SCREEN:** sidebar, then open the **Data** tab so the input tables show.
 
-I'm Dependar Arya, data lead. The case is a G+4 academic block: ₹14 crore,
-twelve months, nineteen work packages, reported at month six. This data is
-synthetic — plausible, but assumed, from no tender or invoice. The tool reads
-three files: baseline, work breakdown, actuals. Replace those and everything you
-are about to see recomputes.
+Hi, I'm Dependar, I handled the data. So the case is a G+4 academic block —
+fourteen crore, twelve months, nineteen packages, reported at the end of month
+six.
+
+One thing upfront: this data is synthetic. Plausible for a building this size,
+but assumed — not from any real tender or invoice.
+
+The tool reads three files. Baseline, work breakdown, actuals. Swap those out
+and everything recalculates.
 
 ---
 
 ## 3. Neel Shah · 1:00–1:45
 
-**ON SCREEN:** back to the top. Cursor: verdict bar → plain-language summary → CPI
-tile → TCPI tile, holding on TCPI.
+**ON SCREEN:** back to the top. Cursor: verdict bar → summary → CPI tile →
+TCPI, holding on TCPI.
 
-I'm Neel Shah, I built the tool. It answers before it reports. The top line reads
-*behind schedule and overspent* — that verdict comes from thresholds in one file,
-so the same inputs always give the same answer.
+I'm Neel, I built the tool. So it answers before it reports. Top line — behind
+schedule and overspent. That verdict comes from thresholds in one file, so the
+same inputs always give you the same answer.
 
-Below it, in plain English: 24.8 percent complete against a plan of 28.7, 19 days
-behind, finishing ₹2.06 crore over budget.
+Below it, in plain English. 24.8 percent complete against a plan of 28.7, 19
+days behind, finishing 2.06 crore over budget.
 
-CPI is 0.872: every rupee returns 87 paise of budgeted work. And the number to
-hold on to — TCPI, 1.051. That is how efficiently the remaining work must run to
-finish on budget: 20 percent better than we have managed in any of six months.
-The budget is gone.
+CPI is 0.872 — every rupee you spend buys 87 paise of budgeted work.
+
+And this one I'd remember. TCPI, 1.051. That's how efficiently the rest has to
+run to finish on budget. Twenty percent better than we've managed in any of six
+months. So, realistically — the budget's gone.
 
 ---
 
@@ -89,31 +105,38 @@ The budget is gone.
 **ON SCREEN:** open **Where the variance is** (Sub-level), then **Performance
 trend**, then **Forecast**.
 
-I'm Akshat Karkar, validation engineer — so where is the money? Excavation, CPI
-0.689, 100 percent complete: that variance is final. Of ₹51 lakh of overrun, ₹38
-lakh is already gone. Only ₹7.7 lakh is still live, in the frame.
+I'm Akshat, I did the validation. So where's the money actually gone?
 
-On schedule, SPI returns to 1.00 on every project ever finished, however late — so
-we use Earned Schedule: 19 days behind, which a site manager can act on.
+Excavation — CPI 0.689, and it's 100 percent complete, so that variance is
+final. Of 51 lakh of overrun, 38 lakh is already spent. Only 7.7 lakh is still
+live, in the frame.
 
-The forecast gives four methods, ₹14.5 to ₹18 crore. We don't pick one; the spread
-is the assumption kept visible.
+On schedule, here's the thing. SPI goes back to 1.00 on every project that ever
+finished, however late. So we use Earned Schedule — 19 days behind. You can act
+on that.
+
+The forecast gives four methods, 14.5 up to 18 crore. We don't pick one. The
+spread is the assumption, kept visible.
 
 ---
 
 ## 5. Pearsh Gumasta · 2:22–3:00
 
 **ON SCREEN:** the Excel export, then a final frame showing the live tool link
-(`https://ce725-evm-dashboard-3hfqkptabnvbzvzyb8uopr.streamlit.app`) with all five members on camera.
+with all five members on camera.
 
-I'm Pearsh Gumasta. How do we know it's right? Every number is checked against an
-Excel workbook of typed formulas, evaluated by LibreOffice independently of our
-code. Fifty of fifty agree, to the paisa, behind 151 passing tests.
+I'm Pearsh. So how do we know any of this is right?
 
-But validation has a limit: both sides read the same percent-complete figure. If
-site reports a package 60 percent complete when it's really 40, both compute the
-same wrong earned value, every comparison agrees, and every index is confidently
+Every number's checked against an Excel workbook of typed formulas, evaluated
+by LibreOffice — independent of our code. Fifty out of fifty agree, to the
+paisa. Plus 151 tests passing.
+
+But here's the limit. Both sides read the same percent-complete figure. So if
+site reports a package at 60 percent when it's really 40, both compute the same
+wrong earned value, all fifty still agree, and every index is confidently
 wrong.
 
-We validated the arithmetic to nine decimal places. The arithmetic was never the
-risk. Everything is at the link on screen — it's live, please try it.
+We validated the arithmetic to nine decimal places. The arithmetic was never
+the risk.
+
+It's all at the link on screen. It's live — please try it.

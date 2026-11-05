@@ -12,7 +12,7 @@ Benchmark case: reporting periods 5 and 6 of the case study project
 | Measures compared | 25 per period, 2 periods, **50 comparisons** |
 | Agreement | **50 of 50**, within tolerance |
 | Tolerance | ₹0.01 on currency, 1 × 10⁻⁹ on dimensionless indices |
-| Discrepancies found during development | 5, all resolved — section 5 |
+| Discrepancies found during development | 6, all resolved — section 5 |
 | Automated tests | **151**, all passing |
 
 The headline result is that two independently written implementations of
@@ -398,6 +398,47 @@ figures and not prose. It is the same class of defect as 5.3: output that
 is numerically valid and unusable by a reader. It also makes a narrower
 point about our own test data — a single case study, however carefully
 built, only tests the paths it happens to take.
+
+### 5.6 The Excel export appeared to download an empty file
+
+**Found.** By a reader opening the exported workbook, which is the only
+way this could have been found. Every sheet showed its labels and not one
+number.
+
+**Cause.** `openpyxl` stores a cell as *either* a formula *or* a value,
+never both, so every formula we write is saved with no cached result. Real
+Excel stores both: the formula and the last computed value. We set
+`fullCalcOnLoad`, which makes Excel and LibreOffice recalculate when the
+file opens, and there the workbook displays correctly. Anything that reads
+cached values without calculating — Apple Numbers, macOS Quick Look, most
+in-browser previewers — finds nothing to read. Inspecting the file
+confirmed it: 46 populated cells on the Dashboard sheet, of which 29 had
+cached values, and all 29 were text labels. Passing the same file through
+LibreOffice headless raised that to 46.
+
+**Resolved.** The live-formula behaviour is deliberate and was kept — it is
+the reason the workbook can be interrogated without the tool. What was
+missing was any way for the reader to know. The Dashboard sheet now
+carries a note at the top, the Read Me opens with an *"If the dashboard
+looks empty"* section, and the headline figures are written to the Read Me
+as plain numbers so that something is always readable. The dashboard's
+download button repeats the warning.
+
+**Why it is reported.** The file was valid the entire time. Every formula
+was correct, and the workbook had been checked by reading it back with the
+same library that wrote it — which recalculates nothing and so could never
+have caught this. It took someone opening the file in an ordinary viewer.
+That is the same lesson as 5.3: we had tested the artefact we produced,
+not the artefact as it is received.
+
+**Found at the same time.** Two sidebar controls looked inert. Both in
+fact worked — the breakdown radio changes the variance table from 6 summary
+rows to 19 packages, and the SPI(t) checkbox moves EAC3 from ₹17.98 crore
+to ₹17.51 crore — but each affects exactly one tab, so changing one while
+reading any other tab does nothing visible. The checkbox was also
+mislabelled: it reads "EAC method 3" and silently changes EAC4 as well,
+because EAC4 blends the same index. Each control now names the tab it
+governs, and the checkbox names both methods.
 
 ---
 

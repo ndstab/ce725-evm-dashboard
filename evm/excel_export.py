@@ -236,6 +236,15 @@ def export_workbook(project: Project, destination: str | Path) -> Path:
     dash["A2"] = (f"{project.meta.project_code}  |  data date: end of Period "
                   f"{data_date} ({project.meta.label(data_date)})")
     dash["A2"].font = NOTE_FONT
+    # Every figure below is a formula with no cached result, because
+    # openpyxl cannot write both. Excel and LibreOffice recalculate on
+    # open; Numbers, Quick Look and most online previewers do not, and
+    # show a sheet of labels with every number blank. Say so here rather
+    # than let the reader conclude the export is broken.
+    dash["A3"] = ("Figures below are live formulas. If they appear blank, your viewer "
+                  "is not calculating them — open in Excel or LibreOffice, or see "
+                  "'Position at export' on the Read Me sheet.")
+    dash["A3"].font = NOTE_FONT
     dash.column_dimensions["A"].width = 4
     dash.column_dimensions["B"].width = 38
     dash.column_dimensions["C"].width = 22
@@ -429,6 +438,17 @@ def export_workbook(project: Project, destination: str | Path) -> Path:
         f"Exported from the CE725 EVM Dashboard for {project.meta.project_name}.",
         f"Data date: end of Period {data_date} ({project.meta.label(data_date)}).",
         "",
+        "IF THE DASHBOARD LOOKS EMPTY",
+        "",
+        "It is not. Every figure on the Dashboard and EVM sheets is a formula, and",
+        "formulas are stored without a cached result. Excel and LibreOffice",
+        "recalculate when the file opens and display them normally. Apple Numbers,",
+        "macOS Quick Look and most in-browser previewers do not calculate, so they",
+        "show the labels and leave every number blank.",
+        "",
+        "Open the file in Excel or LibreOffice. If you only need the headline",
+        "figures, they are written as plain numbers under POSITION AT EXPORT below.",
+        "",
         "LIVE, NOT A SNAPSHOT",
         "",
         "Every figure on the Dashboard and EVM sheets is an Excel formula. Edit any",
@@ -455,11 +475,20 @@ def export_workbook(project: Project, destination: str | Path) -> Path:
         "",
         "POSITION AT EXPORT",
         "",
-        f"    CPI {m.cpi:.3f}    SPI {m.spi:.3f}    "
-        f"complete {m.pct_complete:.1f}%    spent {m.pct_spent:.1f}%",
+        f"    Budget at completion (BAC)   Rs {project.bac:,.0f}",
+        f"    Planned value (PV)           Rs {m.pv:,.0f}",
+        f"    Earned value (EV)            Rs {m.ev:,.0f}",
+        f"    Actual cost (AC)             Rs {m.ac:,.0f}",
+        f"    Cost variance (CV)           Rs {m.cv:,.0f}",
+        f"    Schedule variance (SV)       Rs {m.sv:,.0f}",
+        f"    CPI                          {m.cpi:.3f}",
+        f"    SPI                          {m.spi:.3f}",
+        f"    Percent complete             {m.pct_complete:.1f}%",
+        f"    Percent spent                {m.pct_spent:.1f}%",
         "",
-        "These figures are stated here for reference only. The Dashboard sheet",
-        "recomputes them from the inputs and is what should be read.",
+        "These are plain numbers, not formulas, so they are readable in any viewer.",
+        "They are a snapshot at export. The Dashboard sheet recomputes from the",
+        "inputs and is what should be read once the file is open in a spreadsheet.",
     ], start=2):
         ws.cell(row=i, column=1, value=line)
 

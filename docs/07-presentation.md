@@ -226,7 +226,7 @@ execution environment, and it is *executed*, not re-implemented."
 
 ### Slide 11 — What we got wrong (13:00–14:00)
 
-Five discrepancies, all recorded:
+Six discrepancies, all recorded:
 
 | Found | Resolution |
 |---|---|
@@ -419,7 +419,7 @@ is resisted for that reason. Better software does not fix it.
 **Q. How much of this did AI write?**
 Most of the code, and first drafts of the documents. All of it was
 checked: expected values hand-derived before the engine ran, an
-independent benchmark, and a 33-entry usage log recording where AI was
+independent benchmark, and a 34-entry usage log recording where AI was
 wrong, where we were wrong, and where its output was rejected on
 principle.
 

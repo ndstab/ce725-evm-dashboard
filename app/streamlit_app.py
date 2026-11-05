@@ -169,19 +169,32 @@ with st.sidebar:
     st.caption(f"Period {period} — {project.meta.label(period)}")
 
     st.divider()
+    # Each of these drives exactly one tab. Grouped under a single
+    # "Forecast assumptions" heading they looked inert, because changing
+    # one while reading any other tab does nothing visible. Each now says
+    # which tab it governs.
     st.markdown("**Forecast assumptions**")
     use_spi_t = st.checkbox(
-        "Use SPI(t) in EAC method 3", value=False,
+        "Use SPI(t) instead of SPI in EAC3 and EAC4", value=False,
         help=(
             "Classical SPI drifts back towards 1.00 as a project ends, "
             "whatever the delay. SPI(t) does not. Late in a project the "
-            "time-based index is the more trustworthy driver."
+            "time-based index is the more trustworthy driver. EAC3 uses "
+            "the index directly; EAC4 uses it in a weighted blend, so both "
+            "move."
         ),
     )
+    st.caption("Changes EAC3 and EAC4 on the **Forecast** tab.")
+
+    st.divider()
+    st.markdown("**Variance breakdown**")
     wbs_level = st.radio(
-        "Variance breakdown", options=[1, 2, None],
+        "Aggregation level", options=[1, 2, None],
         format_func=lambda v: {1: "Top level", 2: "Sub-level", None: "Work package"}[v],
-        index=1, horizontal=True,
+        index=1, horizontal=True, label_visibility="collapsed",
+    )
+    st.caption(
+        "Depth of the chart and table on the **Where the variance is** tab."
     )
 
     st.divider()
@@ -199,7 +212,14 @@ with st.sidebar:
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 width="stretch",
             )
-            st.caption("Every figure in it is a live formula, not a pasted value.")
+            st.caption(
+                "Every figure in it is a live formula, not a pasted value. "
+                "Open it in Excel or LibreOffice: previewers that do not "
+                "calculate formulas (Apple Numbers, Quick Look, most "
+                "in-browser viewers) will show the labels with every number "
+                "blank. The Read Me sheet repeats the headline figures as "
+                "plain numbers."
+            )
 
     st.divider()
     st.caption(

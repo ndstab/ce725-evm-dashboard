@@ -166,7 +166,7 @@ to write the script.
 
 | File | Covers |
 |---|---|
-| [`docs/04-validation-report.md`](../04-validation-report.md) | How the benchmark works, and the five discrepancies behind slide 11 |
+| [`docs/04-validation-report.md`](../04-validation-report.md) | How the benchmark works, and the six discrepancies behind slide 11 |
 | [`docs/06-learnings-and-reflection.md`](../06-learnings-and-reflection.md) | Each member's own account of what they learned — useful for giving each speaker their own voice |
 | [`docs/03-user-manual.md`](../03-user-manual.md) | What each dashboard screen shows, if a demo segment needs describing precisely |
 | [`docs/02-method-note.md`](../02-method-note.md) | Why Earned Schedule, why synthetic data, what we took from prior art |

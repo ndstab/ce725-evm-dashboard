@@ -674,7 +674,7 @@ being double counted — and the project would have looked healthier while
 being worse.
 
 What I will carry is to ask *why* a test fails before changing anything at
-all. Two of our five discrepancies were defects in the check rather than
+all. Two of our six discrepancies were defects in the check rather than
 in the thing being checked, and in both cases the quick fix would have
 made the output greener and the tool less trustworthy. That asymmetry —
 that the wrong fix looks like progress — is what I want to remember.

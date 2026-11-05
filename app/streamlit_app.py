@@ -16,7 +16,10 @@ gives a manager nothing to act on.
 
 from __future__ import annotations
 
+import io
 import sys
+import tempfile
+import zipfile
 from pathlib import Path
 
 import streamlit as st
@@ -69,9 +72,43 @@ STYLE = """
 st.markdown(STYLE, unsafe_allow_html=True)
 
 
+DATA_DIR = ROOT / "data"
+REQUIRED_FILES = ("wbs.csv", "baseline.csv", "actuals.csv", "project.json")
+
+
 @st.cache_data(show_spinner=False)
 def load(data_dir: str) -> evm.Project:
     return evm.load_project(data_dir)
+
+
+@st.cache_data(show_spinner=False)
+def materialise(payload: tuple[tuple[str, bytes], ...]) -> str:
+    """Write uploaded files to a temporary folder and return its path.
+
+    The engine loads a project from a directory, so uploads have to land
+    on disk somewhere. Keyed on the file contents, which means the same
+    upload reuses one folder instead of writing a fresh copy on every
+    Streamlit rerun.
+    """
+    target = Path(tempfile.mkdtemp(prefix="evm-upload-"))
+    for name, blob in payload:
+        (target / name).write_bytes(blob)
+    return str(target)
+
+
+@st.cache_data(show_spinner=False)
+def template_bundle() -> bytes:
+    """The worked case study, zipped, as a starting point for your own data.
+
+    A blank template would be harder to fill in correctly than a working
+    example you edit: the baseline has to reconcile to each package budget
+    and the packages to BAC, which is easier to preserve than to achieve.
+    """
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as archive:
+        for name in (*REQUIRED_FILES, "README.md"):
+            archive.write(DATA_DIR / name, name)
+    return buffer.getvalue()
 
 
 def rupees(value: float) -> str:
@@ -89,7 +126,34 @@ with st.sidebar:
     st.markdown("### EVM Dashboard")
     st.caption("CE725 Construction Economics and Finance")
 
-    data_dir = st.text_input("Project data folder", value=str(ROOT / "data"))
+    source = st.radio(
+        "Project data",
+        ["Worked case study", "Upload your own"],
+        help=(
+            "The tool runs on any project supplied as four files. Download "
+            "the template to see the exact format expected."
+        ),
+    )
+    st.download_button(
+        "Download data template", template_bundle(),
+        file_name="evm-data-template.zip", mime="application/zip",
+        width="stretch",
+    )
+
+    if source == "Worked case study":
+        data_dir = str(DATA_DIR)
+    else:
+        uploads = st.file_uploader(
+            "Upload wbs.csv, baseline.csv, actuals.csv and project.json",
+            type=["csv", "json"], accept_multiple_files=True,
+        )
+        supplied = {f.name: f.getvalue() for f in uploads or []}
+        missing = [n for n in REQUIRED_FILES if n not in supplied]
+        if missing:
+            st.info("Still needed: " + ", ".join(missing))
+            st.stop()
+        data_dir = materialise(tuple(sorted(supplied.items())))
+
     try:
         project = load(data_dir)
     except Exception as error:  # noqa: BLE001 - surfaced to the user verbatim

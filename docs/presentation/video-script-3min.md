@@ -103,8 +103,8 @@ is the assumption kept visible.
 
 ## 5. Pearsh Gumasta · 2:22–3:00
 
-**ON SCREEN:** the Excel export, then a final frame with the repository link and
-all five members on camera.
+**ON SCREEN:** the Excel export, then a final frame showing the live tool link
+(`https://ce725-evm-dashboard-3hfqkptabnvbzvzyb8uopr.streamlit.app`) with all five members on camera.
 
 I'm Pearsh Gumasta. How do we know it's right? Every number is checked against an
 Excel workbook of typed formulas, evaluated by LibreOffice independently of our

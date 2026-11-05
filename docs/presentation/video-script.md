@@ -370,8 +370,9 @@ made by a person standing on a site.
 
 ## End card · Pearsh Gumasta · about 10 seconds
 
-**ON SCREEN:** plain card, no music sting, no thank-you slide. Repository link:
-`github.com/ndstab/ce725-evm-dashboard`. Team 40 names underneath.
+**ON SCREEN:** plain card, no music sting, no thank-you slide. Live tool:
+`https://ce725-evm-dashboard-3hfqkptabnvbzvzyb8uopr.streamlit.app`
+and `github.com/ndstab/ce725-evm-dashboard`. Team 40 names underneath.
 
 The tool, the benchmark and all seven documents are in our repository, linked on
 screen.

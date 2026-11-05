@@ -12,6 +12,8 @@ benchmark built in Excel formulas and evaluated by a real spreadsheet
 engine — **50 of 50 comparisons agree, to ₹0.01 on currency and 1×10⁻⁹ on
 the indices**, across two reporting periods.
 
+**Live tool:** <https://ce725-evm-dashboard-3hfqkptabnvbzvzyb8uopr.streamlit.app>
+
 ![Dashboard](docs/img/01-overview.jpg)
 
 ---
@@ -119,7 +121,7 @@ docs/                 all written deliverables
 | [Method note and data sources](docs/02-method-note.md) | The method, why synthetic data, prior art |
 | [User manual](docs/03-user-manual.md) | Inputs, how to read it, assumptions, limitations |
 | [Validation report](docs/04-validation-report.md) | Hand calculations, 50-measure comparison, discrepancy log |
-| [AI usage log](docs/05-ai-usage-log.md) | 31 entries, Annexure A format |
+| [AI usage log](docs/05-ai-usage-log.md) | 32 entries, Annexure A format |
 | [Learnings and reflection](docs/06-learnings-and-reflection.md) | All six required sections |
 | [Presentation and viva prep](docs/07-presentation.md) | Slide content, demo script, expected questions |
 | [Slide deck](docs/presentation/CE725_Team40_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |

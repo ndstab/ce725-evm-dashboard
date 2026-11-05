@@ -168,34 +168,6 @@ with st.sidebar:
     )
     st.caption(f"Period {period} — {project.meta.label(period)}")
 
-    st.divider()
-    # Each of these drives exactly one tab. Grouped under a single
-    # "Forecast assumptions" heading they looked inert, because changing
-    # one while reading any other tab does nothing visible. Each now says
-    # which tab it governs.
-    st.markdown("**Forecast assumptions**")
-    use_spi_t = st.checkbox(
-        "Use SPI(t) instead of SPI in EAC3 and EAC4", value=False,
-        help=(
-            "Classical SPI drifts back towards 1.00 as a project ends, "
-            "whatever the delay. SPI(t) does not. Late in a project the "
-            "time-based index is the more trustworthy driver. EAC3 uses "
-            "the index directly; EAC4 uses it in a weighted blend, so both "
-            "move."
-        ),
-    )
-    st.caption("Changes EAC3 and EAC4 on the **Forecast** tab.")
-
-    st.divider()
-    st.markdown("**Variance breakdown**")
-    wbs_level = st.radio(
-        "Aggregation level", options=[1, 2, None],
-        format_func=lambda v: {1: "Top level", 2: "Sub-level", None: "Work package"}[v],
-        index=1, horizontal=True, label_visibility="collapsed",
-    )
-    st.caption(
-        "Depth of the chart and table on the **Where the variance is** tab."
-    )
 
     st.divider()
     st.markdown("**Export**")
@@ -233,8 +205,7 @@ with st.sidebar:
 # ==========================================================================
 metrics = evm.metrics_at(project, period)
 schedule = evm.earned_schedule(project, period)
-spi_for_forecast = schedule.spi_t if use_spi_t else None
-forecasts = {f.method: f for f in evm.forecasts(metrics, spi=spi_for_forecast)}
+forecasts = {f.method: f for f in evm.forecasts(metrics)}
 tcpi = evm.tcpi_to_bac(metrics)
 status = evm.status_flag(metrics)
 
@@ -345,6 +316,15 @@ with tab_trend:
     )
 
 with tab_variance:
+    wbs_level = st.radio(
+        "Breakdown", options=[1, 2, None],
+        format_func=lambda v: {1: "Top level", 2: "Sub-level", None: "Work package"}[v],
+        index=1, horizontal=True,
+        help=(
+            "How far down the work breakdown structure to aggregate. Top "
+            "level for a client conversation, deeper for a site meeting."
+        ),
+    )
     st.plotly_chart(
         charts.variance_by_package(project, period, level=wbs_level), width="stretch"
     )
@@ -371,9 +351,24 @@ with tab_variance:
     )
 
 with tab_forecast:
+    use_spi_t = st.checkbox(
+        "Use SPI(t) instead of SPI in EAC3 and EAC4", value=False,
+        help=(
+            "Classical SPI drifts back towards 1.00 as a project ends, "
+            "whatever the delay. SPI(t) does not. Late in a project the "
+            "time-based index is the more trustworthy driver. EAC3 uses "
+            "the index directly, EAC4 in a weighted blend, so both move. "
+            "EAC1 and EAC2 carry no schedule term and do not change."
+        ),
+    )
+    tab_forecasts = {
+        f.method: f for f in evm.forecasts(
+            metrics, spi=schedule.spi_t if use_spi_t else None
+        )
+    }
     st.plotly_chart(charts.forecast_range(project, period), width="stretch")
     st.markdown("#### The four methods differ in one assumption only")
-    for f in forecasts.values():
+    for f in tab_forecasts.values():
         st.markdown(
             f"**{f.method} — {f.label}**  ·  {rupees(f.eac)}  "
             f"(VAC {rupees(f.vac)}, {f.vac_pct:+.1f}%)  \n"

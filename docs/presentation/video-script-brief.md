@@ -79,12 +79,12 @@ Name each speaker on screen the first time they talk.
 |---|---|---|---|
 | **Sajjad Nakhwa** | Project Lead and Finance Modeller | 1, 3, 9 | 3:00 |
 | **Pearsh Gumasta** | Documentation and Reflection Lead | 2, 12 | 2:30 |
-| **Deependra Arya** | Data Lead | 4, 7 | 3:00 |
+| **Dependar Arya** | Data Lead | 4, 7 | 3:00 |
 | **Neel Shah** | AI and Tool Developer | 5, 6 | 2:30 |
 | **Akshat Karkar** | Validation Engineer | 8, 10, 11 | 4:00 |
 
 The logic: Sajjad takes the method and the forecasting because he chose
-the formulas; Deependra takes the case study and the variance breakdown
+the formulas; Dependar takes the case study and the variance breakdown
 because both come out of the WBS he built; Neel takes the tool itself;
 Akshat takes validation, the discrepancies and the SPI defect; Pearsh
 takes the opening framing and the closing argument, which are the two

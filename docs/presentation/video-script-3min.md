@@ -21,7 +21,7 @@ figures, then talk.
 | Block | Speaker | Runs | On screen |
 |---|---|---|---|
 | 1 | **Sajjad Nakhwa** | 0:00–0:30 | Dashboard top, Period 6 |
-| 2 | **Deependra Arya** | 0:30–1:00 | Sidebar + Data tab |
+| 2 | **Dependar Arya** | 0:30–1:00 | Sidebar + Data tab |
 | 3 | **Neel Shah** | 1:00–1:45 | Verdict bar → summary → CPI → TCPI |
 | 4 | **Akshat Karkar** | 1:45–2:22 | Variance → Performance trend → Forecast |
 | 5 | **Pearsh Gumasta** | 2:22–3:00 | Excel export, then the live link |
@@ -83,7 +83,7 @@ and all twelve tiles are visible. Cursor parked off to the side.
 - **"It's not"** — drop to the red **BEHIND SCHEDULE AND OVERSPENT** bar and
   leave it there for the whole sentence. Don't circle it; just rest on it.
 - **"earned value"** — move to the **Earned value (EV)** tile and stay until
-  Deependra starts.
+  Dependar starts.
 
 Hi, we're Team 20 — I'm Sajjad, I led the project. So, look at this. We've
 spent 3.98 crore against a plan of 4.02. Under budget, right? Most reports
@@ -96,7 +96,7 @@ So we add the measurement that separates them — earned value.
 
 ---
 
-## 2. Deependra Arya · 0:30–1:00
+## 2. Dependar Arya · 0:30–1:00
 
 **ON SCREEN:** sidebar, then the **Data** tab.
 
@@ -114,7 +114,7 @@ So we add the measurement that separates them — earned value.
   through the input tables while he names them. Keep scrolling gentle; fast
   scrolling reads as panic.
 
-Hi, I'm Deependra, I handled the data. So the case is a G+4 academic block —
+Hi, I'm Dependar, I handled the data. So the case is a G+4 academic block —
 fourteen crore, twelve months, nineteen packages, reported at the end of month
 six.
 

@@ -33,7 +33,7 @@ TEAM = "Team 20"
 WHEN = "November 2026"
 MEMBERS = [
     ("Sajjad Nakhwa", "23B0702", "Project Lead and Finance Modeller"),
-    ("Deependra Arya", "23B0331", "Data Lead"),
+    ("Dependar Arya", "23B0331", "Data Lead"),
     ("Neel Shah", "23B4244", "AI and Tool Developer"),
     ("Akshat Karkar", "23B4229", "Validation Engineer"),
     ("Pearsh Gumasta", "23B4232", "Documentation and Reflection Lead"),

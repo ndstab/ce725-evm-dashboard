@@ -182,7 +182,7 @@ because it is the part you cannot buy.
   Missing periods, retrospective corrections and miscoded costs are
   handled in principle, not against a real ledger.
 
-**Do not take the arithmetic on trust.** `pytest tests/` runs 150 tests
+**Do not take the arithmetic on trust.** `pytest tests/` runs 151 tests
 whose expected values were hand-derived from the case study before the
 engine existed; `python scripts/validate_benchmark.py` re-runs the full
 comparison against the independent Excel benchmark (needs LibreOffice).

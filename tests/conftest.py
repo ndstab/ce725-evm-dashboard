@@ -26,6 +26,20 @@ DATA_DIR = ROOT / "data"
 RUPEE_TOL = 1.0
 
 
+SAMPLE_2_DIR = ROOT / "samples" / "case-02-water-treatment"
+
+
 @pytest.fixture(scope="session")
 def project() -> "evm.Project":
     return evm.load_project(DATA_DIR)
+
+
+@pytest.fixture(scope="session")
+def under_budget_project() -> "evm.Project":
+    """A second case study that is behind programme but UNDER budget.
+
+    The bundled case study is adverse on both axes, which leaves the
+    favourable branches of the commentary and the forecast untested. This
+    project exists to exercise them.
+    """
+    return evm.load_project(SAMPLE_2_DIR)

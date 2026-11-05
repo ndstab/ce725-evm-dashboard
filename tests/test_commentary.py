@@ -140,3 +140,25 @@ class TestExecutiveSummary:
         summary = evm.executive_summary(project, m, es)
         sentences = [s for s in re.split(r"(?<=\.)\s+", summary.strip()) if s]
         assert len(sentences) == 3
+
+    def test_under_budget_project_is_not_asked_to_improve(
+        self, under_budget_project
+    ):
+        """A project forecast to underrun must not be told to improve.
+
+        Found by running the second case study through the tool: the
+        closing sentence was generated unconditionally from TCPI over CPI,
+        so a project already under budget was asked for a "-5% improvement
+        in cost efficiency", which is not a sentence anyone should read in
+        a cost report.
+        """
+        period = under_budget_project.data_date
+        m = evm.metrics_at(under_budget_project, period)
+        es = evm.earned_schedule(under_budget_project, period)
+        summary = evm.executive_summary(under_budget_project, m, es)
+
+        assert m.cpi > 1.0, "fixture must be under budget for this to test anything"
+        assert "under a budget" in summary
+        assert "-" not in summary.split("budget of")[-1]
+        assert "improvement" not in summary
+        assert "still finish within budget" in summary

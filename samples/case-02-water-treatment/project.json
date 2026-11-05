@@ -1,0 +1,23 @@
+{
+  "project_name": "Water Treatment Plant (15 MLD) - Municipal",
+  "project_code": "CE725-CASE-02",
+  "currency": "INR",
+  "baseline_periods": 10,
+  "period_unit": "month",
+  "data_date_period": 4,
+  "period_labels": [
+    "Jun-2026",
+    "Jul-2026",
+    "Aug-2026",
+    "Sep-2026",
+    "Oct-2026",
+    "Nov-2026",
+    "Dec-2026",
+    "Jan-2027",
+    "Feb-2027",
+    "Mar-2027"
+  ],
+  "notes": "Synthetic case study. All budgets, progress percentages and actual costs are assumed for teaching purposes and are not drawn from any real tender, estimate or invoice.",
+  "bac_inr": 85000000,
+  "work_package_count": 13
+}

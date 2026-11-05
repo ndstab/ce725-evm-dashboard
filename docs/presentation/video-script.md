@@ -297,7 +297,7 @@ symptom of a site that was never properly investigated? Now, back to the slides.
 
 **ON SCREEN:** the pipeline diagram. Light each box as it is named: Raw inputs,
 Python engine, Excel formulas, LibreOffice headless, Compare. Then the 50 / 50 and
-150 tiles as they are said.
+151 tiles as they are said.
 
 So how do we know any of this is right? Raw inputs go down two paths. One is our
 Python engine. The other is an Excel workbook of typed formulas, evaluated by
@@ -306,7 +306,7 @@ LibreOffice calculates it independently of our code, and we read its results bac
 We then compare fifty measures across two reporting periods. Fifty of fifty agree,
 to one paisa on currency and one part in a billion on indices.
 
-Behind that sit 150 automated tests, all passing. We worked out their expected
+Behind that sit 151 automated tests, all passing. We worked out their expected
 values by hand before the engine existed, so the tests could not simply echo the
 code.
 

@@ -12,8 +12,8 @@ Benchmark case: reporting periods 5 and 6 of the case study project
 | Measures compared | 25 per period, 2 periods, **50 comparisons** |
 | Agreement | **50 of 50**, within tolerance |
 | Tolerance | ₹0.01 on currency, 1 × 10⁻⁹ on dimensionless indices |
-| Discrepancies found during development | 4, all resolved — section 5 |
-| Automated tests | **150**, all passing |
+| Discrepancies found during development | 5, all resolved — section 5 |
+| Automated tests | **151**, all passing |
 
 The headline result is that two independently written implementations of
 the EVM definitions — one in Python, one in typed Excel formulas — agree
@@ -365,6 +365,40 @@ report is zero.
 case study has no gaps in reporting. Real project data does. The defect
 would have surfaced in exactly the situation the tool is meant to handle.
 
+### 5.5 A project under budget was told to improve by −5%
+
+**Found.** By building a second case study specifically to exercise the
+branches the first one never reaches. The bundled project is adverse on
+both cost and schedule, so every favourable path through the commentary
+was unexercised. A second synthetic project — a 15 MLD water treatment
+plant, behind programme but **under** budget at CPI 1.041 — produced this
+closing sentence in its executive summary:
+
+> Returning to budget would require a **−5% improvement** in cost
+> efficiency on all remaining work.
+
+**Cause.** The sentence was generated unconditionally from TCPI divided by
+CPI. When a project is already forecast to underrun, that ratio is below
+one and the "improvement required" is negative, which is not a quantity
+that exists.
+
+**Resolved.** The closing sentence now branches. A project forecast to
+overrun is told what improvement is required; a project forecast to
+underrun is told how much headroom it has — *"the remaining work could run
+about 5% less cost efficiently than it has so far and still finish within
+budget"*. A regression test
+(`tests/test_commentary.py::test_under_budget_project_is_not_asked_to_improve`)
+fixes the behaviour, and the second case study is committed under
+`samples/case-02-water-treatment/` so the branch stays exercised.
+
+**Why it is reported.** Every number in the sentence was correct. The
+arithmetic was right and the English was nonsense, and no comparison
+against the benchmark could have caught it, because the benchmark checks
+figures and not prose. It is the same class of defect as 5.3: output that
+is numerically valid and unusable by a reader. It also makes a narrower
+point about our own test data — a single case study, however carefully
+built, only tests the paths it happens to take.
+
 ---
 
 ## 6. What this validation does **not** establish
@@ -415,7 +449,7 @@ Three further limits of this exercise:
 .venv/bin/python data/generate_case_study.py        # regenerate inputs
 .venv/bin/python benchmark/build_benchmark.py       # place the formulas
 .venv/bin/python scripts/validate_benchmark.py      # evaluate and compare
-.venv/bin/python -m pytest tests/ -v                # 150 tests
+.venv/bin/python -m pytest tests/ -v                # 151 tests
 ```
 
 The third command needs LibreOffice. The test suite does not — it reads a

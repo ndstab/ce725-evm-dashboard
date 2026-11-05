@@ -612,7 +612,7 @@ executive summary panel with a light background and never set a text
 colour. On a browser in dark mode Streamlit supplied white text, and the
 single most important paragraph in the tool — the plain-language verdict
 a non-specialist reads first, and may be the only thing they read —
-rendered white on white. All 150 tests passed. Every number was correct.
+rendered white on white. All 151 tests passed. Every number was correct.
 The tool was unusable. I found it by accident, opening the app to take
 screenshots for the manual.
 
@@ -642,7 +642,7 @@ chart is blank.
 ### 5.4 Akshat Karkar (23B4229) — Validation Engineer
 
 I owned the check: the independent benchmark workbook, the hand
-calculations for Periods 5 and 6, the 150-test suite, and the discrepancy
+calculations for Periods 5 and 6, the 151-test suite, and the discrepancy
 log.
 
 My first plan was to write a second implementation of the EVM formulas in
@@ -674,7 +674,7 @@ being double counted — and the project would have looked healthier while
 being worse.
 
 What I will carry is to ask *why* a test fails before changing anything at
-all. Two of our four discrepancies were defects in the check rather than
+all. Two of our five discrepancies were defects in the check rather than
 in the thing being checked, and in both cases the quick fix would have
 made the output greener and the tool less trustworthy. That asymmetry —
 that the wrong fix looks like progress — is what I want to remember.

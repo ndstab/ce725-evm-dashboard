@@ -218,13 +218,29 @@ def executive_summary(project: Project, metrics: PeriodMetrics,
     days = abs(es.sv_t) * DAYS_PER_PERIOD
     late = "behind" if es.sv_t < 0 else "ahead of"
     over = "over" if central.vac < 0 else "under"
+
+    # TCPI against CPI, as a percentage change on performance to date.
+    # Positive means the remaining work has to improve; negative means
+    # there is headroom. Asking for a "-5% improvement" is not a sentence
+    # anyone should read in a cost report, so the two cases are worded
+    # separately rather than sharing one template.
+    delta = (tcpi_to_bac(metrics) / metrics.cpi - 1) * 100
+    if delta > 0:
+        closing = (
+            f"Returning to budget would require a {delta:.0f}% improvement in "
+            f"cost efficiency on all remaining work."
+        )
+    else:
+        closing = (
+            f"The remaining work could run about {abs(delta):.0f}% less cost "
+            f"efficiently than it has so far and still finish within budget."
+        )
+
     return (
         f"The project is {metrics.pct_complete:.1f}% complete against a plan of "
         f"{metrics.pct_scheduled:.1f}%, having spent {metrics.pct_spent:.1f}% of the "
         f"budget. It is approximately {days:.0f} days {late} programme and, if "
         f"current cost performance continues, will finish about "
         f"{_crore(abs(central.vac))} {over} a budget of {_crore(metrics.bac)}. "
-        f"Returning to budget would require a "
-        f"{(tcpi_to_bac(metrics) / metrics.cpi - 1) * 100:.0f}% improvement in cost "
-        f"efficiency on all remaining work."
+        f"{closing}"
     )

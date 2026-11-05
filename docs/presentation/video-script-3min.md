@@ -108,7 +108,7 @@ is the assumption kept visible.
 
 I'm Pearsh Gumasta. How do we know it's right? Every number is checked against an
 Excel workbook of typed formulas, evaluated by LibreOffice independently of our
-code. Fifty of fifty agree, to the paisa, behind 150 passing tests.
+code. Fifty of fifty agree, to the paisa, behind 151 passing tests.
 
 But validation has a limit: both sides read the same percent-complete figure. If
 site reports a package 60 percent complete when it's really 40, both compute the

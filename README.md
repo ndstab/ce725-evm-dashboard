@@ -49,7 +49,7 @@ Opens at `http://localhost:8501` with a worked case study loaded, so it is
 usable immediately without supplying data.
 
 ```bash
-.venv/bin/python -m pytest tests/ -q          # 150 tests
+.venv/bin/python -m pytest tests/ -q          # 151 tests
 .venv/bin/python scripts/validate_benchmark.py # full benchmark comparison
 ```
 
@@ -107,7 +107,7 @@ app/                  Streamlit dashboard and Plotly charts
 data/                 case study generator and generated inputs
 benchmark/            the independent manual benchmark workbook
 scripts/              benchmark evaluation and comparison
-tests/                150 tests, expected values hand-derived
+tests/                151 tests, expected values hand-derived
 docs/                 all written deliverables
 ```
 
@@ -121,7 +121,7 @@ docs/                 all written deliverables
 | [Method note and data sources](docs/02-method-note.md) | The method, why synthetic data, prior art |
 | [User manual](docs/03-user-manual.md) | Inputs, how to read it, assumptions, limitations |
 | [Validation report](docs/04-validation-report.md) | Hand calculations, 50-measure comparison, discrepancy log |
-| [AI usage log](docs/05-ai-usage-log.md) | 32 entries, Annexure A format |
+| [AI usage log](docs/05-ai-usage-log.md) | 33 entries, Annexure A format |
 | [Learnings and reflection](docs/06-learnings-and-reflection.md) | All six required sections |
 | [Presentation and viva prep](docs/07-presentation.md) | Slide content, demo script, expected questions |
 | [Slide deck](docs/presentation/CE725_Team40_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |
@@ -163,7 +163,7 @@ misread it identically, the comparison passes, and both are wrong. So the
 benchmark lives in a different execution environment and is **executed,
 not re-implemented**.
 
-Four discrepancies surfaced during development. All are recorded in the
+Five discrepancies surfaced during development. All are recorded in the
 validation report, including the two where the tool was right and we were
 wrong — a hand calculation of EAC3 that rounded an intermediate index
 mid-chain and came out ₹156 off, and two validation tests that were

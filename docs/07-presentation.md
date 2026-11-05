@@ -213,7 +213,7 @@ site that was never properly investigated?"
 ```
 
 **50 of 50 agree** — ₹0.01 on currency, 1e−9 on indices, both periods.
-**150 automated tests.** Expected values hand-derived before the engine
+**151 automated tests.** Expected values hand-derived before the engine
 was written.
 
 *Say:* "The critical decision was **not** to write a second Python
@@ -226,7 +226,7 @@ execution environment, and it is *executed*, not re-implemented."
 
 ### Slide 11 — What we got wrong (13:00–14:00)
 
-Four discrepancies, all recorded:
+Five discrepancies, all recorded:
 
 | Found | Resolution |
 |---|---|
@@ -276,7 +276,7 @@ Before presenting:
 - [ ] A pre-built `output/EVM_Report.xlsx` open in a second window, in
       case the live export is slow
 - [ ] `.venv/bin/python -m pytest tests/ -q` run once — be ready to show
-      **150 passed** if asked
+      **151 passed** if asked
 - [ ] Repository open in a browser tab
 
 **If the app fails to start**, present from the screenshots in
@@ -419,7 +419,7 @@ is resisted for that reason. Better software does not fix it.
 **Q. How much of this did AI write?**
 Most of the code, and first drafts of the documents. All of it was
 checked: expected values hand-derived before the engine ran, an
-independent benchmark, and a 32-entry usage log recording where AI was
+independent benchmark, and a 33-entry usage log recording where AI was
 wrong, where we were wrong, and where its output was rejected on
 principle.
 

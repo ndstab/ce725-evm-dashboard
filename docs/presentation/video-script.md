@@ -15,8 +15,8 @@ the last line of slide 12, and cursor moves in the demo.
 | 1 Title | **Sajjad** | 0:30 | ~75 |
 | 2 The problem | **Sajjad** | 1:30 | ~205 |
 | 3 The method | **Sajjad** | 1:30 | ~205 |
-| 4 Case study | **Dependar** | 1:00 | ~150 |
-| 5 What we built | **Dependar** | 0:30 | ~70 |
+| 4 Case study | **Deependra** | 1:00 | ~150 |
+| 5 What we built | **Deependra** | 0:30 | ~70 |
 | 6 Demo: position | **Neel** | 2:00 | ~255 |
 | 7 Demo: variance | **Neel** | 2:00 | ~245 |
 | 8 Demo: schedule defect | **Akshat** | 1:30 | ~200 |
@@ -26,11 +26,11 @@ the last line of slide 12, and cursor moves in the demo.
 | 12 What validation cannot do | **Pearsh** | 1:00 | ~160 |
 | End card | **Pearsh** | 0:10 | ~15 |
 
-**Time per speaker:** Sajjad 3:30 · Dependar 1:30 · Neel 4:00 · Akshat 4:00 ·
+**Time per speaker:** Sajjad 3:30 · Deependra 1:30 · Neel 4:00 · Akshat 4:00 ·
 Pearsh 2:10.
 
 **Names on screen.** Put a lower-third (name and role) once, on each speaker's
-first slide: **Sajjad on 1, Dependar on 4, Neel on 6, Akshat on 8, Pearsh on 11.**
+first slide: **Sajjad on 1, Deependra on 4, Neel on 6, Akshat on 8, Pearsh on 11.**
 Because nobody returns, no second lower-third is ever needed.
 
 **Numbers on screen.** Every figure is on its slide or on the dashboard when it
@@ -117,16 +117,16 @@ Against a PV of ₹4.02 crore, SPI is 0.863.
 That is the whole method. The rest is bookkeeping on top of it. What our tool
 adds is Earned Schedule, four forecasting methods, and the same calculation
 repeated at every work package, not just for the project as a whole. Over to
-Dependar for the data.
+Deependra for the data.
 
 ---
 
-## Slide 4 — The case study · Dependar Arya · 3:30–4:30
+## Slide 4 — The case study · Deependra Arya · 3:30–4:30
 
-**ON SCREEN:** case-study slide. Lower-third: *Dependar Arya, Data Lead.* Keep the
+**ON SCREEN:** case-study slide. Lower-third: *Deependra Arya, Data Lead.* Keep the
 **Synthetic data** callout visible for the whole segment.
 
-I'm Dependar Arya, data lead. Our case study is a G+4 reinforced-concrete
+I'm Deependra Arya, data lead. Our case study is a G+4 reinforced-concrete
 academic block. Budget at completion is ₹14.00 crore, over twelve months, split
 into nineteen work packages. Our data date is the end of month six, September
 2026.
@@ -143,7 +143,7 @@ against a planned 12.
 
 ---
 
-## Slide 5 — What we built · Dependar Arya · 4:30–5:00
+## Slide 5 — What we built · Deependra Arya · 4:30–5:00
 
 **ON SCREEN:** the four-pieces slide. Light each piece as it is named. Cut to the
 dashboard on the last line.

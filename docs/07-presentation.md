@@ -43,7 +43,7 @@ from bullet points.
 
 **Earned Value Management Dashboard**
 Construction Economics and Finance · CE725 · Topic 7
-Team 20 · Sajjad Nakhwa · Dependar Arya · Neel Shah · Akshat Karkar · Pearsh Gumasta
+Team 20 · Sajjad Nakhwa · Deependra Arya · Neel Shah · Akshat Karkar · Pearsh Gumasta
 
 *Say:* "We built a tool that tells a project manager whether a project is
 in trouble, where the trouble is, and what it will cost. The part we want

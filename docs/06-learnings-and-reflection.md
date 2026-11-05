@@ -3,7 +3,7 @@
 **CE725 Construction Economics and Finance**
 **Topic 7: Earned Value Management Dashboard**
 
-**Team 20** — Sajjad Nakhwa (23B0702) · Dependar Arya (23B0331) ·
+**Team 20** — Sajjad Nakhwa (23B0702) · Deependra Arya (23B0331) ·
 Neel Shah (23B4244) · Akshat Karkar (23B4229) · Pearsh Gumasta (23B4232)
 
 ---
@@ -561,7 +561,7 @@ about the site team who would be asked to deliver that 20% improvement,
 and about the client who absorbs ₹38 lakh either way. Both are better
 served by being told in month six than at handover.
 
-### 5.2 Dependar Arya (23B0331) — Data Lead
+### 5.2 Deependra Arya (23B0331) — Data Lead
 
 I built the case study: the work breakdown, the budget for each of the 19
 packages, the baseline window each one sits in, the phasing within those

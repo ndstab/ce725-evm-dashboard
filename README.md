@@ -124,11 +124,11 @@ docs/                 all written deliverables
 | [AI usage log](docs/05-ai-usage-log.md) | 35 entries, Annexure A format |
 | [Learnings and reflection](docs/06-learnings-and-reflection.md) | All six required sections |
 | [Presentation and viva prep](docs/07-presentation.md) | Slide content, demo script, expected questions |
-| [Slide deck](docs/presentation/CE725_Team40_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |
+| [Slide deck](docs/presentation/CE725_Team20_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |
 
 Submission-ready PDFs of all of the above, with title pages and running
 footers, are in [`docs/pdf/`](docs/pdf/) — including
-`CE725_Team40_Topic7_All_Deliverables.pdf`, the whole set as one 73-page
+`CE725_Team20_Topic7_All_Deliverables.pdf`, the whole set as one 73-page
 file. Rebuild them with:
 
 ```bash

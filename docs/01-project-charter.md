@@ -3,7 +3,7 @@
 **CE725 Construction Economics and Finance — Semester Course Project**
 **Topic 7: Earned Value Management (EVM) Dashboard**
 
-**Team 40**
+**Team 20**
 
 > This is the final version of the charter submitted earlier in the
 > semester. The fields below expand on that submission; nothing in it has
@@ -22,7 +22,7 @@
 
 | Item | Details |
 |---|---|
-| **Team number** | 40 |
+| **Team number** | 20 |
 | **Team members and roles** | **Sajjad Nakhwa** (23B0702) — Project Lead and Finance Modeller: owns the EVM method, the choice of forecasting formulas and the index conventions used throughout.<br>**Dependar Arya** (23B0331) — Data Lead: owns the case study project, the work breakdown structure, the time-phased budget and the source list.<br>**Neel Shah** (23B4244) — AI and Tool Developer: owns the Python engine, the Streamlit dashboard and the Excel export; manages the repository.<br>**Akshat Karkar** (23B4229) — Validation Engineer: owns the manual benchmark workbook, the hand calculations, the test suite and the discrepancy log.<br>**Pearsh Gumasta** (23B4232) — Documentation and Reflection Lead: owns the user manual, the AI usage log, the reflection report and the presentation. |
 | **Topic selected** | Topic 7 — Earned Value Management (EVM) Dashboard |
 | **Problem statement** | Construction project managers learn that a project is in trouble too late to act. Monthly reporting typically compares money spent against money budgeted, which conflates two different failures: spending more than planned, and doing less work than planned. A project that has spent 28% of its budget may be 28% complete or 20% complete, and the cost report alone cannot distinguish them. Earned Value Management separates the two by introducing a third measure, the budgeted cost of the work actually done, and from it derives early warning indices. The problem this tool addresses is that EVM is computationally tedious at work-package level, is therefore usually either skipped or rolled up to a single project curve that cannot locate a variance, and produces indices that non-specialist decision-makers cannot interpret. |

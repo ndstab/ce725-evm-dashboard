@@ -11,7 +11,7 @@ that, and is the part worth rehearsing.
 ## 0. The built deck
 
 The slides below are built into
-[`docs/presentation/CE725_Team40_EVM_Dashboard.pptx`](presentation/CE725_Team40_EVM_Dashboard.pptx)
+[`docs/presentation/CE725_Team20_EVM_Dashboard.pptx`](presentation/CE725_Team20_EVM_Dashboard.pptx)
 — 12 slides, 16:9, with the *Say* paragraphs carried through as speaker
 notes.
 
@@ -43,7 +43,7 @@ from bullet points.
 
 **Earned Value Management Dashboard**
 Construction Economics and Finance · CE725 · Topic 7
-Team 40 · Sajjad Nakhwa · Dependar Arya · Neel Shah · Akshat Karkar · Pearsh Gumasta
+Team 20 · Sajjad Nakhwa · Dependar Arya · Neel Shah · Akshat Karkar · Pearsh Gumasta
 
 *Say:* "We built a tool that tells a project manager whether a project is
 in trouble, where the trouble is, and what it will cost. The part we want

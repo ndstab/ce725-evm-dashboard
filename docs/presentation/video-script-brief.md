@@ -1,6 +1,6 @@
 # Brief for the video script
 
-**CE725 Topic 7 — Earned Value Management Dashboard · Team 40**
+**CE725 Topic 7 — Earned Value Management Dashboard · Team 20**
 
 We are submitting the presentation as a pre-recorded video instead of
 presenting live. This is everything the person writing the script needs.
@@ -27,7 +27,7 @@ visible failure to follow the brief.
 | File | What it gives you |
 |---|---|
 | [`docs/07-presentation.md`](../07-presentation.md) | Slide-by-slide content, timings, what to point at during the demo, and 30-odd anticipated questions with answers |
-| [`docs/presentation/CE725_Team40_EVM_Dashboard.pptx`](CE725_Team40_EVM_Dashboard.pptx) | The 12 slides themselves. Every slide's speaker notes already hold its narration cue |
+| [`docs/presentation/CE725_Team20_EVM_Dashboard.pptx`](CE725_Team20_EVM_Dashboard.pptx) | The 12 slides themselves. Every slide's speaker notes already hold its narration cue |
 
 Everything else listed in §7 below is background you can draw on, not
 required reading.

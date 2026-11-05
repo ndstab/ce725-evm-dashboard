@@ -1,4 +1,4 @@
-# CE725 Team 40 — EVM Dashboard: Video Script (15:00)
+# CE725 Team 20 — EVM Dashboard: Video Script (15:00)
 
 **Speaker order revised so each member speaks once, in one unbroken block.**
 
@@ -51,7 +51,7 @@ describe the case study as real. Do not soften slide 12.
 **ON SCREEN:** title slide. Lower-third: *Sajjad Nakhwa, Project Lead and Finance
 Modeller.*
 
-Hello, we're Team 40. I'm Sajjad Nakhwa, project lead and finance modeller, and
+Hello, we're Team 20. I'm Sajjad Nakhwa, project lead and finance modeller, and
 you'll hear from all five of us today. We built a tool that tells a project
 manager whether a project is in trouble, where the trouble is, and what it will
 cost. But we want to spend most of our time on a harder question: how do we know
@@ -372,7 +372,7 @@ made by a person standing on a site.
 
 **ON SCREEN:** plain card, no music sting, no thank-you slide. Live tool:
 `https://ce725-evm-dashboard-3hfqkptabnvbzvzyb8uopr.streamlit.app`
-and `github.com/ndstab/ce725-evm-dashboard`. Team 40 names underneath.
+and `github.com/ndstab/ce725-evm-dashboard`. Team 20 names underneath.
 
 The tool, the benchmark and all seven documents are in our repository, linked on
 screen.

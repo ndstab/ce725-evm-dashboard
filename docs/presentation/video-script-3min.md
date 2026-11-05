@@ -1,4 +1,4 @@
-# CE725 Team 40 — EVM Dashboard: 3-minute pitch video
+# CE725 Team 20 — EVM Dashboard: 3-minute pitch video
 
 **Written to the 30 October instruction: about 3 minutes, all five members on
 video, NO slides, a demonstration of the tool explaining the interface and
@@ -85,7 +85,7 @@ and all twelve tiles are visible. Cursor parked off to the side.
 - **"earned value"** — move to the **Earned value (EV)** tile and stay until
   Dependar starts.
 
-Hi, we're Team 40 — I'm Sajjad, I led the project. So, look at this. We've
+Hi, we're Team 20 — I'm Sajjad, I led the project. So, look at this. We've
 spent 3.98 crore against a plan of 4.02. Under budget, right? Most reports
 would call that healthy.
 

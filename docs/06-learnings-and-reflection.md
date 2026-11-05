@@ -3,7 +3,7 @@
 **CE725 Construction Economics and Finance**
 **Topic 7: Earned Value Management Dashboard**
 
-**Team 40** — Sajjad Nakhwa (23B0702) · Dependar Arya (23B0331) ·
+**Team 20** — Sajjad Nakhwa (23B0702) · Dependar Arya (23B0331) ·
 Neel Shah (23B4244) · Akshat Karkar (23B4229) · Pearsh Gumasta (23B4232)
 
 ---

@@ -29,7 +29,7 @@ OUT = DOCS / "pdf"
 
 COURSE = "CE725 Construction Economics and Finance"
 TOPIC = "Topic 7 — Earned Value Management Dashboard"
-TEAM = "Team 40"
+TEAM = "Team 20"
 WHEN = "November 2026"
 MEMBERS = [
     ("Sajjad Nakhwa", "23B0702", "Project Lead and Finance Modeller"),
@@ -56,7 +56,7 @@ DOCUMENTS = [
     ("07-presentation.md", "Presentation Script and Viva Preparation", "portrait", False),
 ]
 
-DECK = DOCS / "presentation" / "CE725_Team40_EVM_Dashboard.pptx"
+DECK = DOCS / "presentation" / "CE725_Team20_EVM_Dashboard.pptx"
 DECK_PDF_NAME = "08-presentation-slides.pdf"
 
 # Page counts the brief specifies, checked after the build rather than assumed.
@@ -268,7 +268,7 @@ def main() -> int:
     for _, path, _ in built:
         for page in PdfReader(path).pages:
             writer.add_page(page)
-    combined = OUT / "CE725_Team40_Topic7_All_Deliverables.pdf"
+    combined = OUT / "CE725_Team20_Topic7_All_Deliverables.pdf"
     with open(combined, "wb") as fh:
         writer.write(fh)
     print(f"\n{combined.name:36s} {len(writer.pages):3d} pages (all of the above)")

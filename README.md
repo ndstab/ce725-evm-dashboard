@@ -121,7 +121,7 @@ docs/                 all written deliverables
 | [Method note and data sources](docs/02-method-note.md) | The method, why synthetic data, prior art |
 | [User manual](docs/03-user-manual.md) | Inputs, how to read it, assumptions, limitations |
 | [Validation report](docs/04-validation-report.md) | Hand calculations, 50-measure comparison, discrepancy log |
-| [AI usage log](docs/05-ai-usage-log.md) | 34 entries, Annexure A format |
+| [AI usage log](docs/05-ai-usage-log.md) | 35 entries, Annexure A format |
 | [Learnings and reflection](docs/06-learnings-and-reflection.md) | All six required sections |
 | [Presentation and viva prep](docs/07-presentation.md) | Slide content, demo script, expected questions |
 | [Slide deck](docs/presentation/CE725_Team40_EVM_Dashboard.pptx) | 12 slides with speaker notes, generated from the above |
